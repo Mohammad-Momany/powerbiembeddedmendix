@@ -1,9 +1,8 @@
 import { ReactElement, createElement } from "react";
+// import { PowerBIEmbeddedPreviewProps } from "../typings/PowerBIEmbeddedProps";
 
-import { PowerBIEmbeddedPreviewProps } from "../typings/PowerBIEmbeddedProps";
-
-export function preview({}: PowerBIEmbeddedPreviewProps): ReactElement {
-    return <div />;
+export function preview(): ReactElement {
+    return <div>Power BI Embedded</div>;
 }
 
 export function getPreviewCss(): string {

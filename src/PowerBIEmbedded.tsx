@@ -3,10 +3,11 @@ import { models } from "powerbi-client";
 import { PowerBIEmbed } from "powerbi-client-react";
 import { PowerBIEmbeddedContainerProps } from "../typings/PowerBIEmbeddedProps";
 
-import "./ui/PowerBIEmbedded.css"; 
+import "./ui/PowerBIEmbedded.css";
 
 export function PowerBIEmbedded(props: PowerBIEmbeddedContainerProps): ReactElement {
-    const { reportType, reportIdattr, embedURLattr, accessTokenattr, class: className} = props;
+    const { reportType, reportIdattr, embedURLattr, accessTokenattr, class: className } = props;
+    const { filterPaneEnabled, navContentPaneEnabled } = props;
     return (
         <div className={className}>
             <PowerBIEmbed
@@ -15,7 +16,11 @@ export function PowerBIEmbedded(props: PowerBIEmbeddedContainerProps): ReactElem
                     id: reportIdattr.status === "available" ? reportIdattr.displayValue : "",
                     embedUrl: embedURLattr.status === "available" ? embedURLattr.displayValue : "",
                     accessToken: accessTokenattr.status === "available" ? accessTokenattr.displayValue : "",
-                    tokenType: models.TokenType.Embed
+                    tokenType: models.TokenType.Embed,
+                    settings: {
+                        filterPaneEnabled,
+                        navContentPaneEnabled
+                    }
                 }}
             />
         </div>

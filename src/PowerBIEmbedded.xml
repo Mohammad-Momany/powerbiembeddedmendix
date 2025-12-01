@@ -2,7 +2,7 @@
 <widget id="lowcodeconnect.powerbiembedded.PowerBIEmbedded" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
     xmlns="http://www.mendix.com/widget/1.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Power BIEmbedded</name>
+    <name>Power BI Embed</name>
     <description>Embed a PowerBI Dashboard in a Mendix app</description>
     <icon>
 /9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAwcICQT/xAAsEAABBAEDAwIFBQEAAAAAAAACAQMEBQYHERIACDETFBVUYpOhCSFCUXGR/8QAGQEAAgMBAAAAAAAAAAAAAAAAAgMEBQgJ/8QAKBEAAgIBAQgBBQEAAAAAAAAAAQIDESEEAAUGEhMxQVEiFTJCUoGh/9oADAMBAAIRAxEAPwC/GiJ5xBASIi8IIqqr0f4dL+Vk/aLpFd51dHy6v0xxmzbbnY/lWoFfXXNe6u8e1ijFmyvbvj4cZJ6MyRtluBoHEkISIV49QO13tl0oo2rTKNLO3/Ha1+UzBblWWI08Vk33S4ttIRsonIl8J/SKvhFVOT0O6oWiiaR25pLpVjD4Br91Nkg4AOKzmhoiSSQMwQCl7kmvF+jtQPw6X8rJ+0XQHSJlxRMSEh8oQqip1GfcfgOi+hHdZoHp0z256Fz4usU+5hzZb2F1rb1aMKMw6CtikfYlI305cv4gqJspchb3ZjXR8RrtTsZrWm4OP4rqBYV1NXtLtHqopRYUr27A+G2RekvEDY7ACHxFBERFJes4eWLQprkdiHXnW1VbXqNETYkcgh1IogWM32tUOqZpjEwGDRok0eUN5UeDt1d1tFbS6fB7+rqbG+HBcwh5DPr64EdnSIgR5cZ1Y7aqnquB7oXPTReRC2aAhHxAoG/Vf7kMu1vvtSNNXqMRxfT/AC/T2wpzCtfasFWyhOvOBJQlVOXquK2g8QUVDiu5b9aj+p9X46IFg82IiLzgiO6IiFttv5/71dcK8VR7onj1EunErRj4EsVKnqI99mzSuvYYc3dAEt5bofVKUSQqG74u/iR7HsH+bZH6VZrlWXd82kVlkszKMidoNfdVIzCSFfnSI0Vitp3EjsAu5IKKj/FoEROXPZN9+tHu1GitYlPnF/aVNlQjnWYTMhgV9iCNTo8Q48SM0shtFX0nD9qTnpqvIRcBDQT5ALSKe6QqKvOKJIgqil+yonhP8TofqfV+Om8TcYfV4o4kgEQVOTDXjqvLgcqgZcDsftuxZGwbr3KdIWLOWs32r8Qvs+B/u3//2Q==	
@@ -45,20 +45,10 @@
                     <attributeType name="String"/>
                 </attributeTypes>
             </property>
-
-            <property key="expiryattr" type="attribute">
-                <caption>Expiry attr</caption>
-                <description>Attribute containing the expiry seconds</description>
-                <attributeTypes>
-                    <attributeType name="Long"/>
-                    <attributeType name="Integer"/>
-                </attributeTypes>
-            </property>
         </propertyGroup>
 
 
         <propertyGroup caption="Appearance">
-
             <property key="filterPaneEnabled" type="boolean" defaultValue="false">
                 <caption>Show filters</caption>
                 <description>Show the filter panel</description>
@@ -69,11 +59,5 @@
             </property>
         </propertyGroup>
 
-        <propertyGroup caption="Token">
-            <property key="mfGetToken" type="action" required="false">
-                <caption>Refresh token microflow</caption>
-                <description>Called when the token is about to expire.</description>
-            </property>
-        </propertyGroup>
     </properties>
 </widget>

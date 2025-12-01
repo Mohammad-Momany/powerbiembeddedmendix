@@ -4,8 +4,7 @@
  * @author Mendix Widgets Framework Team
  */
 import { CSSProperties } from "react";
-import { ActionValue, EditableValue } from "mendix";
-import { Big } from "big.js";
+import { EditableValue } from "mendix";
 
 export type ReportTypeEnum = "report" | "dashboard" | "tile" | "visual" | "qna" | "paginated_report";
 
@@ -18,10 +17,8 @@ export interface PowerBIEmbeddedContainerProps {
     reportIdattr: EditableValue<string>;
     embedURLattr: EditableValue<string>;
     accessTokenattr: EditableValue<string>;
-    expiryattr: EditableValue<Big>;
     filterPaneEnabled: boolean;
     navContentPaneEnabled: boolean;
-    mfGetToken?: ActionValue;
 }
 
 export interface PowerBIEmbeddedPreviewProps {
@@ -39,8 +36,6 @@ export interface PowerBIEmbeddedPreviewProps {
     reportIdattr: string;
     embedURLattr: string;
     accessTokenattr: string;
-    expiryattr: string;
     filterPaneEnabled: boolean;
     navContentPaneEnabled: boolean;
-    mfGetToken: {} | null;
 }
