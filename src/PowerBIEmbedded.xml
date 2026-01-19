@@ -47,6 +47,80 @@
             </property>
         </propertyGroup>
 
+        <propertyGroup caption="Filter1">
+            <property key="f1Enable" type="boolean" required="true" defaultValue="true">
+                <caption>Enable Filter 1</caption>
+                <description/>
+			</property>
+			<property key="f1Table" type="string" required="false" defaultValue="">
+				<caption>Table Name</caption>
+				<description>The table name in Power BI (e.g. Municipalities)</description>
+			</property>
+			<property key="f1Column" type="string" required="false" defaultValue="">
+				<caption>Column Name</caption>
+				<description>The column name (e.g. Name)</description>
+			</property>
+			<property key="f1Value" type="expression" required="false">
+				<caption>Filter Value</caption>
+				<description>Select the Mendix attribute holding the value</description>
+				<returnType type="String"/>
+			</property>
+			<property key="f1Operator" type="enumeration" defaultValue="In">
+				<caption>Operator</caption>
+				<description>Choose how to filter the data</description>
+				<enumerationValues>
+					<enumerationValue key="In">Is (In)</enumerationValue>
+					<enumerationValue key="NotIn">Is Not (NotIn)</enumerationValue>
+					<enumerationValue key="Contains">Contains</enumerationValue>
+					<enumerationValue key="StartsWith">Starts With</enumerationValue>
+				</enumerationValues>
+			</property>
+			<property key="f1Locked" type="boolean" defaultValue="true">
+				<caption>Lock Filter</caption>
+				<description>If Yes, user cannot change this filter</description>
+			</property>
+			<property key="f1Hidden" type="boolean" defaultValue="true">
+				<caption>Hide Filter</caption>
+				<description>If Yes, the filter card is hidden from the side pane</description>
+			</property>
+		</propertyGroup>
+		<propertyGroup caption="Filter2">
+            <property key="f2Enable" type="boolean" required="true" defaultValue="false">
+                <caption>Enable Filter 2</caption>
+                <description/>
+			</property>
+			<property key="f2Table" type="string" required="false" defaultValue="">
+				<caption>Table Name</caption>
+				<description>The table name in Power BI (e.g. Municipalities)</description>
+			</property>
+			<property key="f2Column" type="string" required="false" defaultValue="">
+				<caption>Column Name</caption>
+				<description>The column name (e.g. Name)</description>
+			</property>
+			<property key="f2Value" type="expression" required="false">
+				<caption>Filter Value</caption>
+				<description>Select the Mendix attribute holding the value</description>
+				<returnType type="String"/>
+			</property>
+			<property key="f2Operator" type="enumeration" defaultValue="In">
+				<caption>Operator</caption>
+				<description>Choose how to filter the data</description>
+				<enumerationValues>
+					<enumerationValue key="In">Is (In)</enumerationValue>
+					<enumerationValue key="NotIn">Is Not (NotIn)</enumerationValue>
+					<enumerationValue key="Contains">Contains</enumerationValue>
+					<enumerationValue key="StartsWith">Starts With</enumerationValue>
+				</enumerationValues>
+			</property>
+			<property key="f2Locked" type="boolean" defaultValue="true">
+				<caption>Lock Filter</caption>
+				<description>If Yes, user cannot change this filter</description>
+			</property>
+			<property key="f2Hidden" type="boolean" defaultValue="true">
+				<caption>Hide Filter</caption>
+				<description>If Yes, the filter card is hidden from the side pane</description>
+			</property>
+		</propertyGroup>
 
         <propertyGroup caption="Appearance">
             <property key="filterPaneEnabled" type="boolean" defaultValue="false">
