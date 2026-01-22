@@ -48,17 +48,20 @@
         </propertyGroup>
 
         <propertyGroup caption="Filter1">
-            <property key="f1Enable" type="boolean" required="true" defaultValue="true">
+            <property key="f1Enable" type="expression" required="true" defaultValue="true">
                 <caption>Enable Filter 1</caption>
                 <description/>
+			 <returnType type="Boolean"/>
 			</property>
-			<property key="f1Table" type="string" required="false" defaultValue="">
+			<property key="f1Table" type="expression" required="false" defaultValue="">
 				<caption>Table Name</caption>
 				<description>The table name in Power BI (e.g. Municipalities)</description>
+				<returnType type="String"/>
 			</property>
-			<property key="f1Column" type="string" required="false" defaultValue="">
+			<property key="f1Column" type="expression" required="false" defaultValue="">
 				<caption>Column Name</caption>
 				<description>The column name (e.g. Name)</description>
+				<returnType type="String"/>
 			</property>
 			<property key="f1Value" type="expression" required="false">
 				<caption>Filter Value</caption>
@@ -85,17 +88,20 @@
 			</property>
 		</propertyGroup>
 		<propertyGroup caption="Filter2">
-            <property key="f2Enable" type="boolean" required="true" defaultValue="false">
+            <property key="f2Enable" type="expression" required="true" defaultValue="false">
                 <caption>Enable Filter 2</caption>
                 <description/>
+			 <returnType type="Boolean"/>
 			</property>
-			<property key="f2Table" type="string" required="false" defaultValue="">
+			<property key="f2Table" type="expression" required="false" defaultValue="">
 				<caption>Table Name</caption>
 				<description>The table name in Power BI (e.g. Municipalities)</description>
+				<returnType type="String"/>
 			</property>
-			<property key="f2Column" type="string" required="false" defaultValue="">
+			<property key="f2Column" type="expression" required="false" defaultValue="">
 				<caption>Column Name</caption>
 				<description>The column name (e.g. Name)</description>
+				<returnType type="String"/>
 			</property>
 			<property key="f2Value" type="expression" required="false">
 				<caption>Filter Value</caption>

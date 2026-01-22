@@ -13,30 +13,22 @@ export function PowerBIEmbedded(props: PowerBIEmbeddedContainerProps): ReactElem
 
     const filters = [];
 
-    if (f1Enable && f1Table && f1Column && f1Value) {
-        filters.push(
-            createBasicFilter(
-                f1Table,
-                f1Column,
-                f1Value.status === "available" ? f1Value.value : "",
-                f1Operator,
-                f1Locked,
-                f1Hidden
-            )
-        );
+    if (
+        f1Enable &&
+        f1Table?.status === "available" &&
+        f1Column?.status === "available" &&
+        f1Value?.status === "available"
+    ) {
+        filters.push(createBasicFilter(f1Table.value, f1Column.value, f1Value.value, f1Operator, f1Locked, f1Hidden));
     }
 
-    if (f2Enable && f2Table && f2Column && f2Value) {
-        filters.push(
-            createBasicFilter(
-                f2Table,
-                f2Column,
-                f2Value.status === "available" ? f2Value.value : "",
-                f2Operator,
-                f2Locked,
-                f2Hidden
-            )
-        );
+    if (
+        f2Enable &&
+        f2Table?.status === "available" &&
+        f2Column?.status === "available" &&
+        f2Value?.status === "available"
+    ) {
+        filters.push(createBasicFilter(f2Table.value, f2Column.value, f2Value.value, f2Operator, f2Locked, f2Hidden));
     }
     return (
         <div className={className}>
